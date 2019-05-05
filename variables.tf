@@ -9,7 +9,7 @@ variable "environment" {
 }
 
 variable "key_name" {
-  default = "bictory"
+  default = "default"
   description = "The AWS key pair to use for resources."
 }
 

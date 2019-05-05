@@ -1,27 +1,27 @@
- output "vpc_id" {
-   value = "${module.vpc.vpc_id}"
- }
+output "vpc_id" {
+  value = "${aws_vpc.environment.id}"
+}
 
- output "vpc_cidr" {
-   value = "${module.vpc.vpc_cidr}"
- }
+output "vpc_cidr" {
+  value = "${aws_vpc.environment.cidr_block}"
+}
 
- output "public_subnet_ids" {
-   value = "${module.vpc.public_subnet_ids}"
- }
+output "public_subnet_ids" {
+  value = "${aws_subnet.public.*.id}"
+}
 
- output "private_subnet_ids" {
-   value = "${module.vpc.private_subnet_ids}"
- }
+output "private_subnet_ids" {
+  value = "${aws_subnet.private.*.id}"
+}
 
- output "public_route_table_id" {
-   value = "${module.vpc.public_route_table_id}"
- }
+output "public_route_table_id" {
+  value = "${aws_route_table.public.id}"
+}
 
- output "private_route_table_id" {
-   value = "${module.vpc.private_route_table_id}"
- }
+output "private_route_table_id" {
+  value = "${aws_route_table.private.*.id}"
+}
 
- output "default_security_group_id" {
-   value = "${module.vpc.default_security_group_id}"
- }
+output "default_security_group_id" {
+  value = "${aws_vpc.environment.default_security_group_id}"
+}

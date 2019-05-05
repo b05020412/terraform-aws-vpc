@@ -5,12 +5,7 @@ variable "region" {
 
 variable "environment" {
   default = "dev"
-  description = "The name of our environment, i.e. development."
-}
-
-variable "key_name" {
-  default = "default"
-  description = "The AWS key pair to use for resources."
+  description = "The name of our environment, i.e. dev, stg, prd."
 }
 
 variable "vpc_cidr" {
@@ -27,39 +22,9 @@ variable "private_subnets" {
   description = "The list of private subnets to populate."
 }
 
-variable "ami" {
-  default = {
-    "us-east-1" = "ami-f652979b"
-    "us-west-1" = "ami-7c4b331c"
-    "eu-west-1" = "ami-0ae77879"
-  }
-
-  description = "The AMIs to use for web and app instances."
-}
-
-variable "instance_type" {
-  default     = "t2.micro"
-  description = "The instance type to launch "
-}
-
 variable "vpc_id" {
   default = ""
   description = "The VPC ID to launch in"
-}
-
-variable "bastion_instance_type" {
-  default     = "t2.micro"
-  description = "The bastion host instance type."
-}
-
-variable "bastion_ami" {
-  default = {
-    "us-east-1" = "ami-f652979b"
-    "us-west-1" = "ami-7c4b331c"
-    "eu-west-1" = "ami-0ae77879"
-  }
-
-  description = "The bastion host AMIs."
 }
 
 variable "enable_dns_hostnames" {

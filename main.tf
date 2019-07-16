@@ -111,21 +111,21 @@ resource "aws_security_group" "bastion" {
     from_port   = 3000
     to_port     = 3000
     protocol    = "tcp"
-    cidr_blocks = ["121.137.63.104/32"]
+    cidr_blocks = ["58.213.161.114/32"]
   }
 
   ingress {
     from_port   = 80
     to_port     = 80
     protocol    = "tcp"
-    cidr_blocks = ["121.137.63.104/32"]
+    cidr_blocks = ["58.213.161.114/32"]
   }
 
   ingress {
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
-    cidr_blocks = ["121.137.63.104/32"]
+    cidr_blocks = ["58.213.161.114/32"]
   }
 
   egress {
